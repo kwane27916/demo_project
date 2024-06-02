@@ -16,9 +16,7 @@ This project is a backend system designed for managing drone operations across m
 8. [API Documentation](#api-documentation)
 9. [Postman Collection](#postman-collection)
 10. [Project Structure](#project-structure)
-11. [Future Enhancements](#future-enhancements)
-12. [Contributors](#contributors)
-13. [License](#license)
+11. [Contributors](#contributors)
 
 ## Introduction
 
@@ -277,4 +275,4 @@ src/
 
 ## Contributors
 
-- 
+- [Dhyey Vora]([url](https://github.com/DhyeyVora-1706))
