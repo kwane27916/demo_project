@@ -1,8 +1,12 @@
-# User Management API
+
+### README for Test 2: Todo List API with Authentication
+
+# Todo List API with Authentication
+
 
 ## Objective
 
-Develop a user management API using Node.js and Express.js with TypeScript and link the API to a database.
+Develop a todo list API with authentication using Node.js, integrate with a database, Dockerize the application, set up CI/CD pipelines, and write test cases.
 
 ## Table of Contents
 
@@ -17,13 +21,16 @@ Develop a user management API using Node.js and Express.js with TypeScript and l
 
 ## Requirements
 
-- Implement CRUD operations for managing users.
-- Utilize Node.js for backend development.
-- Use Express.js for API creation with TypeScript.
-- Link the API to a database (e.g., MongoDB, PostgreSQL).
-- Write test cases for the API endpoints using Jest.
-- Ensure proper error handling and validation for API requests.
-- Document the API endpoints using tools like Swagger or OpenAPI.
+- Implement CRUD operations for managing todo items.
+- Include user authentication (e.g., JWT-based authentication).
+- Utilize Node.js with Express.js for API development with TypeScript.
+- Integrate the API with a database (e.g., MongoDB, PostgreSQL).
+- Write test cases for API endpoints and authentication flows using Jest.
+- Dockerize the application for easy deployment.
+- Configure CI/CD pipelines for automated testing and deployment.
+- Ensure secure storage of user credentials and proper validation of authentication tokens.
+- Implement pagination and filtering options for fetching todo items.
+- Document the API endpoints and authentication mechanisms.
 
 ## Technologies Used
 
@@ -31,6 +38,8 @@ Develop a user management API using Node.js and Express.js with TypeScript and l
 - **Express.js** (with TypeScript)
 - **MongoDB** or **PostgreSQL**
 - **Jest** (for testing)
+- **Docker**
+- **CI/CD** (GitHub Actions, GitLab CI)
 - **Swagger** or **OpenAPI** (for API documentation)
 
 ## Installation
@@ -40,6 +49,7 @@ Develop a user management API using Node.js and Express.js with TypeScript and l
 - Node.js (>=14.x)
 - npm (>=6.x) or yarn
 - MongoDB or PostgreSQL
+- Docker
 
 ### Steps
 
@@ -77,9 +87,15 @@ JWT_SECRET=your_jwt_secret
 
 ## Usage
 
+### Authentication
+
+- Obtain a JWT token using the `/auth/login` endpoint.
+- Use the token to access other API endpoints.
+
 ### CRUD Operations
 
-- Create, Read, Update, and Delete users using the API endpoints.
+- Manage todo items using the API endpoints.
+- Implement pagination and filtering options for fetching todo items.
 
 ### API Documentation
 
