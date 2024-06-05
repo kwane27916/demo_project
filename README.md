@@ -13,8 +13,7 @@ Develop a user management API using Node.js and Express.js with TypeScript and l
 5. [Usage](#usage)
 6. [API Documentation](#api-documentation)
 7. [Testing](#testing)
-8. [Live Demo](#live-demo)
-9. [Contributors](#contributors)
+8. [Contributors](#contributors)
 
 ## Requirements
 
