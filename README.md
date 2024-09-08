@@ -1,116 +1,76 @@
+# Quiz Application
 
-### README for Test 2: Todo List API with Authentication
-
-# Todo List API with Authentication
-
-
-## Objective
-
-Develop a todo list API with authentication using Node.js, integrate with a database, Dockerize the application, set up CI/CD pipelines, and write test cases.
+This is a Quiz Application built with Node.js and MongoDB. The application allows users to create quizzes, submit answers, and track their scores.
 
 ## Table of Contents
+- [Features](#features)
+- [API Documentation](#api-documentation)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+  - [Local Installation](#local-installation)
+  - [Docker Installation](#docker-installation)
+- [Environment Variables](#environment-variables)
+- [Running the Application](#running-the-application)
+  - [Running Locally](#running-locally)
+  - [Running Using Docker](#running-using-docker)
+- [Testing the API](#testing-the-api)
+- [Deployment](#deployment)
 
-1. [Requirements](#requirements)
-2. [Technologies Used](#technologies-used)
-3. [Installation](#installation)
-4. [Configuration](#configuration)
-5. [Usage](#usage)
-6. [API Documentation](#api-documentation)
-7. [Testing](#testing)
-8. [Contributors](#contributors)
+## Features
+- Create quizzes with multiple questions and options.
+- Submit answers and get scores instantly.
+- Track quiz history and retry quizzes.
+- Filter quiz results based on date, grade, subject, and more.
 
-## Requirements
+## API Documentation
+For detailed API documentation, please refer to the [Postman API Documentation](https://documenter.getpostman.com/view/21704786/2sAXjRWVP6).
 
-- Implement CRUD operations for managing todo items.
-- Include user authentication (e.g., JWT-based authentication).
-- Utilize Node.js with Express.js for API development with TypeScript.
-- Integrate the API with a database (e.g., MongoDB, PostgreSQL).
-- Write test cases for API endpoints and authentication flows using Jest.
-- Dockerize the application for easy deployment.
-- Configure CI/CD pipelines for automated testing and deployment.
-- Ensure secure storage of user credentials and proper validation of authentication tokens.
-- Implement pagination and filtering options for fetching todo items.
-- Document the API endpoints and authentication mechanisms.
-
-## Technologies Used
-
-- **Node.js**
-- **Express.js** (with TypeScript)
-- **MongoDB** or **PostgreSQL**
-- **Jest** (for testing)
-- **Docker**
-- **CI/CD** (GitHub Actions, GitLab CI)
-- **Swagger** or **OpenAPI** (for API documentation)
+## Prerequisites
+- [Node.js](https://nodejs.org/) v14 or higher (for local installation)
+- [MongoDB](https://www.mongodb.com/) (local or cloud instance)
+- [Docker](https://www.docker.com/) (for Docker installation)
 
 ## Installation
+### Local Installation
+1. Download or extract the project files to your local machine.
+2. Navigate to the project directory:
+   ```bash
+   cd your-project-directory
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Prerequisites
+### Docker Installation Guide
+#### Build the Docker Image
+1. Navigate to the project directory where the Dockerfile is located.
+2. Run the following command to build the Docker image:
+   ```bash
+   docker build -t yaxprajapati/quiz:latest .
+   ```
+3. Run the Docker container with the environment variables:
+   ```bash
+   docker run --env-file .env -p 3000:3000 yaxprajapati/quiz:latest
+   ```
 
-- Node.js (>=14.x)
-- npm (>=6.x) or yarn
-- MongoDB or PostgreSQL
-- Docker
+#### Stop the Docker Container
+To stop the running container, follow these steps:
+1. Find the Container ID of the running container:
+   ```bash
+   docker ps
+   ```
+2. Stop the container using the Container ID:
+   ```bash
+   docker stop <container_id>
+   ```
 
-### Steps
-
-1. **Clone the repository**
-    ```sh
-    git clone https://github.com/your-repository.git
-    cd your-repository
-    ```
-
-2. **Install dependencies**
-    ```sh
-    npm install
-    # or
-    yarn install
-    ```
-
-3. **Run the application**
-    ```sh
-    npm run start:dev
-    # or
-    yarn start:dev
-    ```
-
-## Configuration
-
-### Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-```plaintext
-PORT=3000
-DATABASE_URI=your_database_uri
+## Environment Variables
+Make sure to configure your environment variables in the .env file. Here's an example format:
+```
+# Example of environment variables
+# Replace the values with your actual configuration
+DATABASE_URL=mongodb://localhost:27017/quiz
 JWT_SECRET=your_jwt_secret
+PORT=3000
 ```
-
-## Usage
-
-### Authentication
-
-- Obtain a JWT token using the `/auth/login` endpoint.
-- Use the token to access other API endpoints.
-
-### CRUD Operations
-
-- Manage todo items using the API endpoints.
-- Implement pagination and filtering options for fetching todo items.
-
-### API Documentation
-
-- **Swagger** or **OpenAPI** documentation can be accessed at `/api-docs`.
-
-## Testing
-
-### Running Tests
-
-```sh
-npm run test
-# or
-yarn test
-```
-
-## Contributors
-
-- [Dhyey Vora](https://github.com/DhyeyVora-1706)
